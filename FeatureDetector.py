@@ -62,9 +62,9 @@ def find_ID(img, desc_list, thres=15):
             
             # For each m and n in matches
             for m, n in matches:
-                # If m distance is less than 0.75 multiplied for n distance
+                # If the distance of the first match is less than 0.75 multiplied for distance of the second match
                 if m.distance < 0.75 * n.distance:
-                    # Append M in good list
+                    # Append the first match in good list
                     good.append([m])
             # Append length of good in match list
             match_list.append(len(good))
